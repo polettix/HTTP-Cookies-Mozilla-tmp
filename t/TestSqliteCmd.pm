@@ -3,6 +3,8 @@ use strict;
 use warnings;
 
 sub which_sqlite {
+   return (undef, "List form of pipe open not implemented")
+      if $^O eq 'MSWin32';
    eval { require 5.008_000; 1 }
      or return (undef, 'perl 5.8 needed for external command execution');
    my $prg = $ENV{SQLITE_PATH} || 'sqlite3';
