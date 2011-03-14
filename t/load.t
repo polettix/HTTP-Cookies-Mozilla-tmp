@@ -8,7 +8,7 @@ use Data::Dumper;
 use lib 't';
 use TestSqliteCmd;
 
-my %Domains = qw( .ebay.com 2 .usatoday.com 3 );
+my %Domains = qw( .ebay.com 2 .usatoday.com 2 );
 
 check('t/cookies.txt', 'plain text');
 
